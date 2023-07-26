@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        input[type=text],input[type=number] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        }
+        input[type=text]:focus {
+             background-color: lightblue;
+        }
+        button{
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .myform{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <h1><div class="left">Prasad's PortFolio</div></h1> 
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contactUs.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <h1>Enter Contact Details</h1>
+    <div class="myform">
+    <form>
+
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" placeholder="Enter Your Name here">
+        <br><br>
+
+        <label for="age">Age</label>
+        <input type="number" min="16" max="80">
+        <br><br>
+
+        <label for="gender">Gender</label>
+        <br>
+        <input type="radio" id="male" name="gender">
+        <label for="male">Male</label>
+        <br>
+        <input type="radio" id="female" name="gender">
+        <label for="female">Female</label>
+
+        <br><br>
+        <label for="dob">Date of Birth: </label>
+        <input type="date" id="dob">
+
+        <br><br>
+        <label for="yourSkills">Skills</label>
+        <br>
+        <input type="checkbox" value="Web" id="skill1">
+        <label for="skill1">Web</label>
+        <br>
+        <input type="checkbox" value="Android" id="skill2">
+        <label for="skill2">Android</label>
+        <br>
+        <input type="checkbox" value="SQL" id="skill3">
+        <label for="skill3">SQL</label>
+        <br>
+
+        <br>
+        <button>Submit</button>
+
+    </form>
+</div>
+<footer>
+    <div class="footer-rights">
+        Copyright &#169;  www.prasadarote.dev | All rights reserved
+     </div>
+</footer>
+</body>
+</html>
