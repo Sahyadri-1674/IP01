@@ -1,0 +1,70 @@
+*************************************Disadvantages of using callbacks:
+
+----->Callback Hell (Pyramid of Doom): When callbacks are nested within each other, it can lead to a situation known as "callback hell" or the "pyramid of doom." This makes the code difficult to read and understand, as the indentation levels increase significantly, leading to reduced code clarity.
+
+----->Error Handling: Error handling can become challenging. If an error occurs deep within nested callbacks, it can be hard to trace back to its source and handle it appropriately. You might need to add error callbacks or use try-catch blocks extensively, making the code more complex.
+
+----->Readability and Maintainability: As the number of callbacks increases, code readability and maintainability can deteriorate, making it harder for developers to understand and modify the code.
+
+----->Lack of Control Flow: Callbacks are event-driven and may not provide the same level of control flow as other programming constructs like loops or conditional statements, making it challenging to express certain control logic.
+
+----->Callback Order: The order in which callbacks are executed is not always guaranteed. If you have multiple asynchronous operations, you might need to introduce additional complexity to ensure they run in a specific order.
+
+
+
+****************************ADVANTAGES OF PROMISES*************************************
+------>PROMISE IS AN OBJECT WHICH REPRESENTS THE EVENTUAL COMPLETION OR FAILURE OF AN ASYNCHRONOUS OPERATION.
+------> PROMISE OBJECTS ARE IMMUTABLE.
+------.A very common mistake that developers do is not returning a value during chaining of promises. Always remember to return a value. This returned value will be used by the next .then()
+
+----> IN PROMISES THE FUNCTIONS ARE ATTACHED NOT PASSED.
+---->IT GUARANTEES THAT IT WILL CALL THE CALLBACK FUNCTION WHENEVER THERE IS DATA INSIDE THE PROMISE OBJECT.(CALL ONLY ONCE)
+---->WE WILL HAVE Control OF PROGRAM WITH US AS WE ARE NOT PASSING OUR CODE TO SOME EXTERNAL FUNCTION.
+
+----->Control Flow:
+
+Callbacks: Callbacks are functions that are passed as arguments to another function and are executed when that function completes its task. Callbacks can lead to nested and complex control flow, which is often referred to as "callback hell" or the "pyramid of doom."
+
+Promises: Promises provide a more structured and linear control flow for handling asynchronous operations. They allow you to chain operations together, making code more readable and avoiding callback nesting.
+
+----->Error Handling:
+
+Callbacks: Error handling in callbacks can be challenging. Developers often need to check for errors within callback functions and propagate them manually, making the code more error-prone.
+
+Promises: Promises have built-in error handling mechanisms. You can use the .catch() method to handle errors in a central location within the Promise chain, improving error management and code clarity.
+
+----->Readability and Maintainability:
+
+Callbacks: Asynchronous code using callbacks can become difficult to read and maintain when there are many nested callbacks, leading to reduced code clarity.
+
+Promises: Promises can make code more readable and maintainable, especially for complex asynchronous tasks, due to their structured and chainable nature.
+
+----->Synchronous Behavior:
+
+Callbacks: Callbacks are inherently asynchronous, which can be a disadvantage when you need to perform tasks sequentially or synchronously.
+
+Promises: Promises allow you to write asynchronous code in a more synchronous-like manner using async/await. This can simplify the writing and understanding of code that involves both asynchronous and synchronous tasks.
+
+----->State Management:
+
+Callbacks: Callbacks do not inherently provide a way to manage and track the state of asynchronous operations.
+
+Promises: Promises have states (pending, fulfilled, or rejected), which allow you to track the progress and outcome of asynchronous operations. This can be beneficial for handling dependencies and complex workflows.
+
+----->Chaining:
+
+Callbacks: Chaining callbacks can be challenging, especially when you need to pass data from one asynchronous operation to another. It often results in deeply nested callbacks.
+
+Promises: Promises support easy chaining, where the result of one asynchronous operation can be seamlessly passed to the next one using .then().
+
+----->Parallel Execution:
+
+----->Callbacks: Coordinating parallel asynchronous operations using callbacks can be complex and might require additional control flow mechanisms.
+
+Promises: Promises provide built-in support for parallel execution and aggregation of results through methods like Promise.all() and Promise.race().
+
+In summary, Promises are a more modern and structured way to handle asynchronous operations in JavaScript, offering improved readability, error handling, and control flow when compared to traditional callback-based approaches. They have become the preferred method for managing asynchronous tasks in modern JavaScript development.
+
+
+
+

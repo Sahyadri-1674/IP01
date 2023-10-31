@@ -1,0 +1,111 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+:root{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/* Child Selector */
+ol > li {    
+    color: red;
+}
+
+
+/* Descendant Selector */
+table td {
+    color: orange;
+}
+
+/* Sibling Selector */
+h2 ~ p {
+    font-style: italic;
+}
+
+
+/* Adjacent Sibling Selector*/
+h3 + p {
+    color: blue;
+}
+
+/* Pseudo Classes */
+
+a:visited {
+    color:blue;
+}
+
+a:hover{
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+a:link{
+    color: aqua;
+}
+
+a:focus {
+    color:chartreuse;
+}
+
+
+input:enabled {
+    background-color: yellow;
+}
+
+input:disabled {
+    background-color: gray;
+}
+
+input:checked + label {
+    font-weight: bold;
+}
+
+
+.mylist, .mylist2 {
+    list-style-type: none;
+}
+
+.mylist li:nth-child(2n+1){
+    background-color: lightgrey;
+}
+
+.mylist2 li:first-child{
+    background-color: violet;
+}
+
+.mylist2 li:last-child{
+    background-color: greenyellow;
+}
+
+h1::first-letter{
+    font-size: 3rem;
+}
+
+div::first-line{
+    background-color: burlywood;
+}
+
+::selection{
+    color: greenyellow;
+    background-color: black;
+}
+
+.required::after{
+    content: '*';
+    color: red;
+    margin-right: 4px;
+}
+
+.important::before{
+    content: 'important';
+    margin-right: 10px;
+    font-size: 0.5rem;
+    color: white;
+    background-color: red;
+    padding: 0.2rem;
+    margin: 0.1rem;
+}
